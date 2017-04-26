@@ -25,15 +25,8 @@ def on_connect(mqtt_client, userdata, flags, rc):
 def fetch_data(value, userdata):
     print(value)
 
-    # if abs(cm - avg) > TOLERANCE_THRESH:
-    #    client.publish(topic, payload=str(cm).encode("utf-8"), qos=0)
-
-    #if len(moving_avg) == moving_avg.max_size():
     client = userdata[PAHO_CLIENT]
     client.publish("ultrasonic", payload=value.encode("utf-8"), qos=0)
-    #    moving_avg.clear()
-
-
 
 if __name__ == "__main__":
     # Parse CLI args
