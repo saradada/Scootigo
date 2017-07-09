@@ -1,1 +1,1 @@
-# SmartScooter
+# Scootigo
