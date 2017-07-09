@@ -7,7 +7,6 @@ long duration1, duration2, cm1, cm2, inches;
 #include <Servo.h>
 
 Servo servo1; // create servo object to control sevo
-Servo servo2;
 int pos = 0;    // variable to store the servo position 
 void setup() {
   //start serial
@@ -17,8 +16,7 @@ void setup() {
   pinMode(trigPin2, OUTPUT);
   pinMode(echoPin1, INPUT);
   pinMode(echoPin2, INPUT);
-  servo1.attach(7);// attach servo to pin 7 to the servo object
-  servo2.attach(8);// atatch servo to pin 8 
+  servo1.attach(8);// attach servo to pin 8 to the servo object
 
 }
 
@@ -66,7 +64,7 @@ void loop() {
 
   if (cm2 < 30)
   {                              
-    servo2.write(pos); // tell servo to go to position in variable 'pos' 
+    servo1.write(pos); // tell servo to go to position in variable 'pos' 
     delay(15); // waits 15ms for the servo to reach the position
     if (pos != 180)
     {
