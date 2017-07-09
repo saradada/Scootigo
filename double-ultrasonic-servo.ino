@@ -55,14 +55,10 @@ void loop() {
     {
       pos = pos + 15; 
     }
-    else
-    {
-      pos = 0;
-    }
   delay(250);
   }
 
-  if (cm2 < 30)
+  else if (cm2 < 30)
   {                              
     servo1.write(pos); // tell servo to go to position in variable 'pos' 
     delay(15); // waits 15ms for the servo to reach the position
@@ -70,10 +66,10 @@ void loop() {
     {
       pos = pos - 15; 
     }
-    else
-    {
-      pos = 0;
-    }
   delay(250);
+  }
+  else if (cm1 <30 & cm2 < 30) // if both are triggered
+  {
+    pos = pos;
   }
 }
