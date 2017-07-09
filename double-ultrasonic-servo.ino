@@ -2,7 +2,7 @@ int trigPin1 = 9;
 int echoPin1 = 10;
 int trigPin2 = 11;
 int echoPin2 = 12;
-long duration1, duration2, cm1, cm2, inches;
+long duration1, duration2, cm1, cm2, inches; //creates multiple measurements
 
 #include <Servo.h>
 
